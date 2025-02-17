@@ -8,3 +8,5 @@
 5585	11350	1739525204	CMakeFiles/Native.dir/db_post_process.cc.o	e9cbe861f12e76e3
 7430	11620	1739525204	CMakeFiles/Native.dir/clipper.cpp.o	e68aa5e742db148
 11620	14373	1739525207	/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/app/build/intermediates/cmake/debug/obj/arm64-v8a/libNative.so	4a0953233ba32ffa
+3	3497	1739779780	CMakeFiles/Native.dir/pipeline.cc.o	32e732a5dcf4fc23
+3497	6171	1739779783	/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/app/build/intermediates/cmake/debug/obj/arm64-v8a/libNative.so	4a0953233ba32ffa

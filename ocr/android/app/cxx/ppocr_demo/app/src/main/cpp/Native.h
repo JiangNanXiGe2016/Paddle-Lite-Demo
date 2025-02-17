@@ -17,6 +17,8 @@
 #include <jni.h>
 #include <string>
 #include <vector>
+#include <opencv2/opencv.hpp>
+#include <android/bitmap.h>
 
 inline std::string jstring_to_cpp_string(JNIEnv *env, jstring jstr) {
   // In java, a unicode char will be encoded using 2 bytes (utf16).
