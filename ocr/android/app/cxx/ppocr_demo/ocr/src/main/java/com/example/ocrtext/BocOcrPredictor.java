@@ -8,7 +8,7 @@ import java.util.List;
 
 public class BocOcrPredictor {
     static {
-        System.loadLibrary("Native");
+        System.loadLibrary("BocOcrPredictor");
     }
 
     private long ctx = 0;
@@ -32,7 +32,7 @@ public class BocOcrPredictor {
                 cpuPowerMode);
         return ctx == 0;
     }
-    public List<OcrResultBean> recognise(Bitmap bitmap){
+    public List<String> recognise(Bitmap bitmap){
         return ocr(ctx,bitmap);
     }
 

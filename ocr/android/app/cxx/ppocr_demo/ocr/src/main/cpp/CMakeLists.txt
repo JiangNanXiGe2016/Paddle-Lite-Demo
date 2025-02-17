@@ -18,44 +18,44 @@ message(STATUS "OpenCV libraries: ${OpenCV_LIBS}")
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 set(CMAKE_CXX_FLAGS
-    "${CMAKE_CXX_FLAGS} -ffast-math -Ofast -Os -DNDEBUG -fno-exceptions -fomit-frame-pointer -fno-asynchronous-unwind-tables -fno-unwind-tables"
+        "${CMAKE_CXX_FLAGS} -ffast-math -Ofast -Os -DNDEBUG -fno-exceptions -fomit-frame-pointer -fno-asynchronous-unwind-tables -fno-unwind-tables"
 )
 set(CMAKE_CXX_FLAGS
-    "${CMAKE_CXX_FLAGS} -fvisibility=hidden -fvisibility-inlines-hidden -fdata-sections -ffunction-sections -fexceptions"
+        "${CMAKE_CXX_FLAGS} -fvisibility=hidden -fvisibility-inlines-hidden -fdata-sections -ffunction-sections -fexceptions"
 )
 set(CMAKE_SHARED_LINKER_FLAGS
-    "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--gc-sections -Wl,-z,nocopyreloc")
+        "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--gc-sections -Wl,-z,nocopyreloc")
 
 add_library(
-  # Sets the name of the library.
-  Native
-  # Sets the library as a shared library.
-  SHARED
-  # Provides a relative path to your source file(s).
-  Native.cc pipeline.cc utils.cc cls_process.cc rec_process.cc det_process.cc db_post_process.cc clipper.cpp)
+        # Sets the name of the library.
+        BocOcrPredictor
+        # Sets the library as a shared library.
+        SHARED
+        # Provides a relative path to your source file(s).
+        BocOcrPredictor.cc pipeline.cc utils.cc cls_process.cc rec_process.cc det_process.cc db_post_process.cc clipper.cpp)
 
 find_library(
-  # Sets the name of the path variable.
-  log-lib
-  # Specifies the name of the NDK library that you want CMake to locate.
-  log)
+        # Sets the name of the path variable.
+        log-lib
+        # Specifies the name of the NDK library that you want CMake to locate.
+        log)
 
 add_library(
-  # Sets the name of the library.
-  paddle_light_api_shared
-  # Sets the library as a shared library.
-  SHARED
-  # Provides a relative path to your source file(s).
-  IMPORTED)
+        # Sets the name of the library.
+        paddle_light_api_shared
+        # Sets the library as a shared library.
+        SHARED
+        # Provides a relative path to your source file(s).
+        IMPORTED)
 
 set_target_properties(
-  # Specifies the target library.
-  paddle_light_api_shared
-  # Specifies the parameter you want to define.
-  PROPERTIES
-    IMPORTED_LOCATION
-    ${PaddleLite_DIR}/cxx/libs/${ANDROID_ABI}/libpaddle_light_api_shared.so
-    # Provides the path to the library you want to import.
+        # Specifies the target library.
+        paddle_light_api_shared
+        # Specifies the parameter you want to define.
+        PROPERTIES
+        IMPORTED_LOCATION
+        ${PaddleLite_DIR}/cxx/libs/${ANDROID_ABI}/libpaddle_light_api_shared.so
+        # Provides the path to the library you want to import.
 )
 
 # Specifies libraries CMake should link to your target library. You can link
@@ -63,11 +63,11 @@ set_target_properties(
 # prebuilt third-party libraries, or system libraries.
 
 target_link_libraries(
-  # Specifies the target library.
-  Native
-  paddle_light_api_shared
-  ${OpenCV_LIBS}
-  GLESv2
-  EGL
-  jnigraphics
-  ${log-lib})
+        # Specifies the target library.
+        BocOcrPredictor
+        paddle_light_api_shared
+        ${OpenCV_LIBS}
+        GLESv2
+        EGL
+        jnigraphics
+        ${log-lib})

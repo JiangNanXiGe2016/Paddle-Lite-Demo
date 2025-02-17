@@ -1,6 +1,6 @@
 {
   "abi": "ARM64_V8A",
-  "abiPlatformVersion": 24,
+  "abiPlatformVersion": 16,
   "buildSettings": {
     "environmentVariables": []
   },
@@ -69,7 +69,7 @@
         },
         {
           "name": "CMAKE_SYSTEM_VERSION",
-          "value": "24"
+          "value": "16"
         },
         {
           "name": "ANDROID_PLATFORM",
@@ -183,6 +183,7 @@
       "project": {
         "compilerSettingsCacheFolder": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/.cxx",
         "cxxFolder": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/.cxx",
+        "ideBuildTargetAbi": "arm64-v8a",
         "isBuildOnlyTargetAbiEnabled": true,
         "isCmakeBuildCohabitationEnabled": false,
         "isNativeCompilerSettingsCacheEnabled": false,
@@ -206,7 +207,6 @@
     "objFolder": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/build/intermediates/cmake/debug/obj",
     "variantName": "debug",
     "validAbiList": [
-      "ARMEABI_V7A",
       "ARM64_V8A"
     ],
     "prefabDirectory": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/.cxx/cmake/debug/prefab",

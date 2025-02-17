@@ -7,7 +7,7 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 24
+        minSdkVersion 15
         externalNativeBuild {
             cmake {
                 arguments '-DANDROID_PLATFORM=android-23', '-DANDROID_STL=c++_shared', "-DANDROID_TOOLCHAIN="

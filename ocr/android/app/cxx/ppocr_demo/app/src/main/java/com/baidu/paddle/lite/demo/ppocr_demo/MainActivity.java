@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import com.baidu.paddle.lite.demo.common.CameraSurfaceView;
 import com.baidu.paddle.lite.demo.common.Utils;
+import com.example.ocrtext.BocOcrPredictor;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -48,7 +49,8 @@ public class MainActivity extends Activity implements View.OnClickListener, Came
     protected String cpuPowerMode = "LITE_POWER_HIGH";
 
 
-    Native predictor = new Native();
+   // Native predictor = new Native();
+    BocOcrPredictor  predictor= new BocOcrPredictor();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

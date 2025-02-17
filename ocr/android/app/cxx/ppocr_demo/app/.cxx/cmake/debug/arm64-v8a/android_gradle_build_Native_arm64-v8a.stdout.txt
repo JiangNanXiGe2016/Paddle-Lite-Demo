@@ -1,5 +1,13 @@
 ninja: Entering directory `/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/app/.cxx/cmake/debug/arm64-v8a'
-[1/2] Building CXX object CMakeFiles/Native.dir/pipeline.cc.o
+[1/9] Building CXX object CMakeFiles/Native.dir/utils.cc.o
+clang++: warning: argument unused during compilation: '-mfpu=neon' [-Wunused-command-line-argument]
+[2/9] Building CXX object CMakeFiles/Native.dir/rec_process.cc.o
+clang++: warning: argument unused during compilation: '-mfpu=neon' [-Wunused-command-line-argument]
+[3/9] Building CXX object CMakeFiles/Native.dir/cls_process.cc.o
+clang++: warning: argument unused during compilation: '-mfpu=neon' [-Wunused-command-line-argument]
+[4/9] Building CXX object CMakeFiles/Native.dir/det_process.cc.o
+clang++: warning: argument unused during compilation: '-mfpu=neon' [-Wunused-command-line-argument]
+[5/9] Building CXX object CMakeFiles/Native.dir/pipeline.cc.o
 clang++: warning: argument unused during compilation: '-mfpu=neon' [-Wunused-command-line-argument]
 /Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/app/src/main/cpp/pipeline.cc:261:29: warning: format specifies type 'int' but the argument has type 'std::__ndk1::vector<std::__ndk1::vector<std::__ndk1::vector<int, std::__ndk1::allocator<int> >, std::__ndk1::allocator<std::__ndk1::vector<int, std::__ndk1::allocator<int> > > >, std::__ndk1::allocator<std::__ndk1::vector<std::__ndk1::vector<int, std::__ndk1::allocator<int> >, std::__ndk1::allocator<std::__ndk1::vector<int, std::__ndk1::allocator<int> > > > > >::size_type' (aka 'unsigned long') [-Wformat]
   LOGD("debug===boxes: %d", boxes.size());
@@ -9,4 +17,10 @@ clang++: warning: argument unused during compilation: '-mfpu=neon' [-Wunused-com
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__)
                                                               ^~~~~~~~~~~
 1 warning generated.
-[2/2] Linking CXX shared library /Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/app/build/intermediates/cmake/debug/obj/arm64-v8a/libNative.so
+[6/9] Building CXX object CMakeFiles/Native.dir/Native.cc.o
+clang++: warning: argument unused during compilation: '-mfpu=neon' [-Wunused-command-line-argument]
+[7/9] Building CXX object CMakeFiles/Native.dir/db_post_process.cc.o
+clang++: warning: argument unused during compilation: '-mfpu=neon' [-Wunused-command-line-argument]
+[8/9] Building CXX object CMakeFiles/Native.dir/clipper.cpp.o
+clang++: warning: argument unused during compilation: '-mfpu=neon' [-Wunused-command-line-argument]
+[9/9] Linking CXX shared library /Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/app/build/intermediates/cmake/debug/obj/arm64-v8a/libNative.so

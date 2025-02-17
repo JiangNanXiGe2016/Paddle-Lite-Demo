@@ -325,8 +325,8 @@ bool Pipeline::Process_val(int inTextureId, int outTextureId, int textureWidth,
   cv::resize(img_res, img_vis, cv::Size(textureWidth, textureHeight));
   cv::cvtColor(img_vis, img_vis, cv::COLOR_BGR2RGBA);
   // show ocr results on image
-  //  VisualizeResults(rec_text, rec_text_score, &img_vis,
-  //  &visualizeResultsTime);
+    VisualizeResults(rec_text, rec_text_score, &img_vis,
+    &visualizeResultsTime);
   VisualizeStatus(readGLFBOTime, writeGLTextureTime, predictTime, rec_text,
                   rec_text_score, visualizeResultsTime, &img_vis);
 

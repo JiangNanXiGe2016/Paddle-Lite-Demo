@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "Native.h"
+#include "BocOcrPredictor.h"
 #include "pipeline.h"
 #include <android/log.h>
 #include <android/bitmap.h>

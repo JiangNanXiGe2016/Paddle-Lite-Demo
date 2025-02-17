@@ -1,0 +1,22 @@
+# ninja log v5
+2	5947	1739782186	CMakeFiles/Native.dir/utils.cc.o	5a5ff6df467bd23c
+1	8031	1739782188	CMakeFiles/Native.dir/Native.cc.o	ded43661c4e4829f
+4	8227	1739782188	CMakeFiles/Native.dir/cls_process.cc.o	c1178ee51f22b727
+7	8301	1739782188	CMakeFiles/Native.dir/rec_process.cc.o	2224b22f9f8f9c7b
+10	9091	1739782189	CMakeFiles/Native.dir/det_process.cc.o	d517453179925949
+2	9647	1739782190	CMakeFiles/Native.dir/pipeline.cc.o	a3e4cc504458cb15
+5950	10872	1739782191	CMakeFiles/Native.dir/db_post_process.cc.o	5c0859819b291e01
+8032	11223	1739782191	CMakeFiles/Native.dir/clipper.cpp.o	9d1187190a75a8a6
+11224	13594	1739782193	/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/build/intermediates/cmake/debug/obj/arm64-v8a/libNative.so	fef254dff54314b0
+1	21	0	clean	cd94cb255a9c5188
+1	4785	1739783969	CMakeFiles/BocOcrPredictor.dir/utils.cc.o	a3163227aef7589c
+0	6594	1739783971	CMakeFiles/BocOcrPredictor.dir/BocOcrPredictor.cc.o	dd62558322380cbd
+1	6671	1739783971	CMakeFiles/BocOcrPredictor.dir/cls_process.cc.o	6dc30a5e82812da9
+3	6993	1739783971	CMakeFiles/BocOcrPredictor.dir/rec_process.cc.o	b3e4363cb8173e93
+4	7639	1739783972	CMakeFiles/BocOcrPredictor.dir/det_process.cc.o	289e8ffb6502feff
+1	8271	1739783972	CMakeFiles/BocOcrPredictor.dir/pipeline.cc.o	6db31f24088027c2
+4785	9642	1739783974	CMakeFiles/BocOcrPredictor.dir/db_post_process.cc.o	6699925e144f4d99
+6595	9990	1739783974	CMakeFiles/BocOcrPredictor.dir/clipper.cpp.o	59668d1a1e7a49e2
+9990	12316	1739783977	/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/build/intermediates/cmake/debug/obj/arm64-v8a/libBocOcrPredictor.so	fedf62e62e56e6f
+3	4835	1739784216	CMakeFiles/BocOcrPredictor.dir/pipeline.cc.o	6db31f24088027c2
+4836	11749	1739784223	/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/build/intermediates/cmake/debug/obj/arm64-v8a/libBocOcrPredictor.so	fedf62e62e56e6f
