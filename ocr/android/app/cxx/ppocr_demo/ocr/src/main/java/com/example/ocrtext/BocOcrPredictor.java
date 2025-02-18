@@ -32,7 +32,7 @@ public class BocOcrPredictor {
                 cpuPowerMode);
         return ctx == 0;
     }
-    public List<String> recognise(Bitmap bitmap){
+    public List<OcrResultBean> recognise(Bitmap bitmap){
         return ocr(ctx,bitmap);
     }
 
@@ -62,7 +62,7 @@ public class BocOcrPredictor {
 
     public static native boolean nativeRelease(long ctx);
    // public static  native ArrayList<OcrResultBean> ocr(long ctx,Bitmap bitmap);
-    public static  native ArrayList<String> ocr(long ctx,Bitmap bitmap);
+    public static  native ArrayList<OcrResultBean> ocr(long ctx,Bitmap bitmap);
     public static native boolean nativeProcess(long ctx, int inTextureId, int outTextureId, int textureWidth, int textureHeight, String savedImagePath);
 
 

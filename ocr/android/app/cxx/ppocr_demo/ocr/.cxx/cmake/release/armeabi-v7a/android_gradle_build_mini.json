@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/src/main/cpp/CMakeLists.txt",
+    "/Users/liangzai/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
+    "/Users/liangzai/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake",
+    "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/OpenCV/sdk/native/jni/OpenCVConfig-version.cmake",
+    "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/OpenCV/sdk/native/jni/OpenCVConfig.cmake",
+    "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/OpenCV/sdk/native/jni/abi-armeabi-v7a/OpenCVConfig.cmake",
+    "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/OpenCV/sdk/native/jni/abi-armeabi-v7a/OpenCVModules.cmake",
+    "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/OpenCV/sdk/native/jni/abi-armeabi-v7a/OpenCVModules-release.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/liangzai/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/.cxx/cmake/release/armeabi-v7a\" clean"
+  ],
+  "buildTargetsCommand": "/Users/liangzai/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/.cxx/cmake/release/armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "BocOcrPredictor-Release-armeabi-v7a": {
+      "artifactName": "BocOcrPredictor",
+      "buildCommand": "/Users/liangzai/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/.cxx/cmake/release/armeabi-v7a\" BocOcrPredictor",
+      "abi": "armeabi-v7a",
+      "output": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/build/intermediates/cmake/release/obj/armeabi-v7a/libBocOcrPredictor.so",
+      "runtimeFiles": [
+        "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/PaddleLite/cxx/libs/armeabi-v7a/libpaddle_light_api_shared.so"
+      ]
+    }
+  }
+}

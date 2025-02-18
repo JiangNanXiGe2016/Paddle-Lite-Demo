@@ -252,7 +252,7 @@ std::vector<std::pair<std::string, float>> Pipeline::Process_single( cv::Mat inR
     cv::Mat img;
     bgrImage_resize.copyTo(img);
     cv::Mat crop_img;
-
+    std::vector<std::pair<std::string, float>> recogniseRes;
     std::vector<std::string> rec_text;
     std::vector<float> rec_text_score;
     LOGD("debug===boxes: %d", boxes.size());
@@ -267,7 +267,9 @@ std::vector<std::pair<std::string, float>> Pipeline::Process_single( cv::Mat inR
         rec_text.push_back(res.first);
         rec_text_score.push_back(res.second);
         LOGD("debug===: result %s %f", res.first.c_str(),res.second);
+        recogniseRes.push_back(res);
     }
+    return recogniseRes;
 
 
 

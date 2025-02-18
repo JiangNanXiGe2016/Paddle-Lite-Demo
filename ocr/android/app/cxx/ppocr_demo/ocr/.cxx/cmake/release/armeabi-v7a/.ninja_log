@@ -1,0 +1,20 @@
+# ninja log v5
+2	4299	1739841279	CMakeFiles/BocOcrPredictor.dir/utils.cc.o	551c988096a23d9
+0	6211	1739841281	CMakeFiles/BocOcrPredictor.dir/BocOcrPredictor.cc.o	895adc082aa72fed
+4	6624	1739841281	CMakeFiles/BocOcrPredictor.dir/cls_process.cc.o	e090bd78ae996889
+6	6818	1739841281	CMakeFiles/BocOcrPredictor.dir/rec_process.cc.o	dc330c08e458ea64
+8	8280	1739841283	CMakeFiles/BocOcrPredictor.dir/det_process.cc.o	f276c5ec33efad36
+1	9636	1739841284	CMakeFiles/BocOcrPredictor.dir/pipeline.cc.o	391055224d5cb3fa
+4301	10682	1739841285	CMakeFiles/BocOcrPredictor.dir/db_post_process.cc.o	5ca7e1cc5cc00a62
+6212	12003	1739841287	CMakeFiles/BocOcrPredictor.dir/clipper.cpp.o	4622cf90c584e6be
+12003	13173	1739841288	/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/build/intermediates/cmake/release/obj/armeabi-v7a/libBocOcrPredictor.so	f88f1cfb7aa8a6c9
+0	21	0	clean	cd94cb255a9c5188
+0	16	0	clean	cd94cb255a9c5188
+0	10	0	clean	cd94cb255a9c5188
+0	18	0	clean	cd94cb255a9c5188
+0	10	0	clean	cd94cb255a9c5188
+0	9	0	clean	cd94cb255a9c5188
+0	21	0	clean	cd94cb255a9c5188
+0	10	0	clean	cd94cb255a9c5188
+0	17	0	clean	cd94cb255a9c5188
+0	13	0	clean	cd94cb255a9c5188

@@ -1,0 +1,86 @@
+{
+  "stringTable": {
+    "0": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/.cxx/cmake/release/armeabi-v7a",
+    "1": "--target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/liangzai/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/liangzai/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DBocOcrPredictor_EXPORTS -I/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/src/main/cpp/../../../PaddleLite/cxx/include -isystem /Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/OpenCV/sdk/native/jni/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -mfpu=neon -ffast-math -Ofast -Os -DNDEBUG -fno-exceptions -fomit-frame-pointer -fno-asynchronous-unwind-tables -fno-unwind-tables -fvisibility=hidden -fvisibility-inlines-hidden -fdata-sections -ffunction-sections -fexceptions -Oz -DNDEBUG -fPIC"
+  },
+  "buildFiles": [
+    "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/src/main/cpp/CMakeLists.txt",
+    "/Users/liangzai/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
+    "/Users/liangzai/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake",
+    "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/OpenCV/sdk/native/jni/OpenCVConfig-version.cmake",
+    "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/OpenCV/sdk/native/jni/OpenCVConfig.cmake",
+    "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/OpenCV/sdk/native/jni/abi-armeabi-v7a/OpenCVConfig.cmake",
+    "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/OpenCV/sdk/native/jni/abi-armeabi-v7a/OpenCVModules.cmake",
+    "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/OpenCV/sdk/native/jni/abi-armeabi-v7a/OpenCVModules-release.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/liangzai/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/.cxx/cmake/release/armeabi-v7a\" clean"
+  ],
+  "buildTargetsCommand": "/Users/liangzai/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/.cxx/cmake/release/armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "BocOcrPredictor-Release-armeabi-v7a": {
+      "buildCommand": "/Users/liangzai/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/.cxx/cmake/release/armeabi-v7a\" BocOcrPredictor",
+      "buildType": "release",
+      "toolchain": "2299006284",
+      "abi": "armeabi-v7a",
+      "artifactName": "BocOcrPredictor",
+      "files": [
+        {
+          "src": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/src/main/cpp/BocOcrPredictor.cc",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/src/main/cpp/pipeline.cc",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/src/main/cpp/utils.cc",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/src/main/cpp/cls_process.cc",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/src/main/cpp/rec_process.cc",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/src/main/cpp/det_process.cc",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/src/main/cpp/db_post_process.cc",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/src/main/cpp/clipper.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/build/intermediates/cmake/release/obj/armeabi-v7a/libBocOcrPredictor.so",
+      "runtimeFiles": [
+        "/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/PaddleLite/cxx/libs/armeabi-v7a/libpaddle_light_api_shared.so"
+      ]
+    }
+  },
+  "toolchains": {
+    "2299006284": {
+      "cppCompilerExecutable": "/Users/liangzai/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cc",
+    "cpp"
+  ]
+}

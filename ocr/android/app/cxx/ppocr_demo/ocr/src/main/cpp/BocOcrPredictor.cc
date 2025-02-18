@@ -166,6 +166,12 @@ Java_com_example_ocrtext_BocOcrPredictor_ocr(JNIEnv *env, jclass clazz, jlong ct
     // 解锁Bitmap
     AndroidBitmap_unlockPixels(env, bitmap);
     std::vector<std::pair<std::string, float>>  res=  pipeline->Process_single(mat);
+
+    for (int i = res.size() - 1; i >= 0; i--) {
+        std::pair<std::string, float> single = res[i];
+        LOGD("debug===: result2 %s %f", single.first.c_str(),single.second);
+    }
+
     // 获取 ArrayList 类
     jclass arrayListClass = env->FindClass("java/util/ArrayList");
     if (arrayListClass == nullptr) {
@@ -191,24 +197,32 @@ Java_com_example_ocrtext_BocOcrPredictor_ocr(JNIEnv *env, jclass clazz, jlong ct
     }
 
     // 获取 String 类
-    jclass stringClass = env->FindClass("java/lang/String");
-    if (stringClass == nullptr) {
-        return nullptr; // 找不到 String 类
+//    jclass stringClass = env->FindClass("java/lang/String");
+//    if (stringClass == nullptr) {
+//        return nullptr; // 找不到 String 类
+//    }
+    jclass beanClass = env->FindClass("com/example/ocrtext/OcrResultBean");
+    if (!beanClass) {
+        return nullptr; // 如果找不到类，返回 nullptr
+    }
+    jmethodID constructor = env->GetMethodID(beanClass, "<init>", "(Ljava/lang/String;F)V");
+    if (!constructor) {
+        return nullptr; // 如果找不到构造方法，返回 nullptr
     }
 
     for (int i = res.size() - 1; i >= 0; i--) {
         std::pair<std::string, float> single = res[i];
         // 创建 Java 的 String 对象
-        jstring javaString = env->NewStringUTF(single.first.c_str());
-        if (javaString == nullptr) {
+        jstring text = env->NewStringUTF(single.first.c_str());
+        if (text == nullptr) {
             continue; // 创建失败，跳过
         }
+        jobject beanObject = env->NewObject(beanClass, constructor, text,single.second);
 
         // 调用 ArrayList 的 add 方法
-        env->CallBooleanMethod(arrayList, addMethod, javaString);
-
-        // 释放 String 对象
-        env->DeleteLocalRef(javaString);
+        env->CallBooleanMethod(arrayList, addMethod, beanObject);
+        // 释放字符串对象
+        env->DeleteLocalRef(text);
     }
 
     return arrayList;
