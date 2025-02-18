@@ -20,3 +20,13 @@
 9990	12316	1739783977	/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/build/intermediates/cmake/debug/obj/arm64-v8a/libBocOcrPredictor.so	fedf62e62e56e6f
 3	4835	1739784216	CMakeFiles/BocOcrPredictor.dir/pipeline.cc.o	6db31f24088027c2
 4836	11749	1739784223	/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/build/intermediates/cmake/debug/obj/arm64-v8a/libBocOcrPredictor.so	fedf62e62e56e6f
+0	35	0	clean	cd94cb255a9c5188
+6	5891	1739839304	CMakeFiles/BocOcrPredictor.dir/utils.cc.o	a3163227aef7589c
+3	8178	1739839306	CMakeFiles/BocOcrPredictor.dir/BocOcrPredictor.cc.o	dd62558322380cbd
+7	8395	1739839307	CMakeFiles/BocOcrPredictor.dir/cls_process.cc.o	6dc30a5e82812da9
+8	8577	1739839307	CMakeFiles/BocOcrPredictor.dir/rec_process.cc.o	b3e4363cb8173e93
+11	9275	1739839308	CMakeFiles/BocOcrPredictor.dir/det_process.cc.o	289e8ffb6502feff
+5	10096	1739839308	CMakeFiles/BocOcrPredictor.dir/pipeline.cc.o	6db31f24088027c2
+5891	11690	1739839310	CMakeFiles/BocOcrPredictor.dir/db_post_process.cc.o	6699925e144f4d99
+8178	12068	1739839310	CMakeFiles/BocOcrPredictor.dir/clipper.cpp.o	59668d1a1e7a49e2
+12068	14752	1739839313	/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/build/intermediates/cmake/debug/obj/arm64-v8a/libBocOcrPredictor.so	fedf62e62e56e6f
