@@ -256,7 +256,7 @@ public class Utils {
             throw new SDKExceptions.NoSDCardPermission();
         }
         // check whether file on SD card
-        File fileInSD = new File(ctx.getExternalFilesDir(null), nnFileName);
+        File fileInSD = new File(ctx.getFilesDir(), nnFileName);
 
         if (fileInSD.exists()) {
             Log.d("debug===", "NN model on SD card " + fileInSD);
@@ -267,7 +267,7 @@ public class Utils {
         OutputStream out = null;
         try {
             in = assetManager.open(nnFileName);
-            File outFile = new File(ctx.getExternalFilesDir(null), nnFileName);
+            File outFile = new File(ctx.getFilesDir(), nnFileName);
             out = new FileOutputStream(outFile);
             byte[] buffer = new byte[1024];
             int read;

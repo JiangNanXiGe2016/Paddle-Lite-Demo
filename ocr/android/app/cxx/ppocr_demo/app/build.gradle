@@ -3,7 +3,7 @@ import java.security.MessageDigest
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
     defaultConfig {
         applicationId "com.baidu.paddle.lite.demo.object_detection"
         minSdkVersion 15

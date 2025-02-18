@@ -167,11 +167,6 @@ Java_com_example_ocrtext_BocOcrPredictor_ocr(JNIEnv *env, jclass clazz, jlong ct
     AndroidBitmap_unlockPixels(env, bitmap);
     std::vector<std::pair<std::string, float>>  res=  pipeline->Process_single(mat);
 
-    for (int i = res.size() - 1; i >= 0; i--) {
-        std::pair<std::string, float> single = res[i];
-        LOGD("debug===: result2 %s %f", single.first.c_str(),single.second);
-    }
-
     // 获取 ArrayList 类
     jclass arrayListClass = env->FindClass("java/util/ArrayList");
     if (arrayListClass == nullptr) {

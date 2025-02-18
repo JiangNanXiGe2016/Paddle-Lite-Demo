@@ -255,7 +255,7 @@ std::vector<std::pair<std::string, float>> Pipeline::Process_single( cv::Mat inR
     std::vector<std::pair<std::string, float>> recogniseRes;
     std::vector<std::string> rec_text;
     std::vector<float> rec_text_score;
-    LOGD("debug===boxes: %d", boxes.size());
+    LOGI("yll===boxes: %d", boxes.size());
     for (int i = boxes.size() - 1; i >= 0; i--) {
         crop_img = GetRotateCropImage(img, boxes[i]);
         if (use_direction_classify >= 1) {
@@ -266,7 +266,7 @@ std::vector<std::pair<std::string, float>> Pipeline::Process_single( cv::Mat inR
                                           charactor_dict_);
         rec_text.push_back(res.first);
         rec_text_score.push_back(res.second);
-        LOGD("debug===: result %s %f", res.first.c_str(),res.second);
+        LOGI("yll===: result %s %f", res.first.c_str(),res.second);
         recogniseRes.push_back(res);
     }
     return recogniseRes;

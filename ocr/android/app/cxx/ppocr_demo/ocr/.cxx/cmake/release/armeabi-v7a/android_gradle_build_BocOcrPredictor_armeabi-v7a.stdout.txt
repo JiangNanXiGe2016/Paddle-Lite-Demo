@@ -5,10 +5,6 @@ ninja: Entering directory `/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/androi
 [4/9] Building CXX object CMakeFiles/BocOcrPredictor.dir/rec_process.cc.o
 [5/9] Building CXX object CMakeFiles/BocOcrPredictor.dir/det_process.cc.o
 [6/9] Building CXX object CMakeFiles/BocOcrPredictor.dir/pipeline.cc.o
-/Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/src/main/cpp/pipeline.cc:275:1: warning: control reaches end of non-void function [-Wreturn-type]
-}
-^
-1 warning generated.
 [7/9] Building CXX object CMakeFiles/BocOcrPredictor.dir/db_post_process.cc.o
 [8/9] Building CXX object CMakeFiles/BocOcrPredictor.dir/clipper.cpp.o
 [9/9] Linking CXX shared library /Users/liangzai/workspace/Paddle-Lite-Demo/ocr/android/app/cxx/ppocr_demo/ocr/build/intermediates/cmake/release/obj/armeabi-v7a/libBocOcrPredictor.so

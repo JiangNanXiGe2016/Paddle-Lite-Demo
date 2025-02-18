@@ -1,5 +1,6 @@
 package com.baidu.paddle.lite.demo.ppocr_demo;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -11,6 +12,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -38,7 +41,7 @@ public class MainActivity2 extends Activity {
     protected String configPath = "config.txt";
     protected int cpuThreadNum = 1;
     protected String cpuPowerMode = "LITE_POWER_HIGH";
-    private TextView  textView;
+    private TextView textView;
 
 
     // Native predictor = new Native();
@@ -56,8 +59,15 @@ public class MainActivity2 extends Activity {
     }
 
     private void setupView() {
+        Button requestButton = findViewById(R.id.request_button);
         Button initButton = findViewById(R.id.init_button);
         Button selectButton = findViewById(R.id.select_button);
+        requestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                requestStoragePermission();
+            }
+        });
         initButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,8 +80,27 @@ public class MainActivity2 extends Activity {
                 openGallery();
             }
         });
-        textView=findViewById(R.id.text);
+        textView = findViewById(R.id.text);
 
+    }
+
+    private static final int REQUEST_EXTERNAL_STORAGE_PERMISSION = 1;
+
+    private boolean checkStoragePermission() {
+        // 检查是否已授予 WRITE_EXTERNAL_STORAGE 权限
+        int permission = ContextCompat.checkSelfPermission(this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        return permission == PackageManager.PERMISSION_GRANTED;
+    }
+
+    private void requestStoragePermission() {
+        if (!checkStoragePermission()) {
+            // 权限未被授予，请求权限
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    REQUEST_EXTERNAL_STORAGE_PERMISSION);
+        }
     }
 
     private static final int GALLERY_REQUEST_CODE = 200;
@@ -86,16 +115,16 @@ public class MainActivity2 extends Activity {
                 Bitmap image = getBitmapFromUri(selectedImageUri);
                 // 显示图片或进行其他操作
                 List<OcrResultBean> results = predictor.recognise(image);
-                   if(results==null){
-                       return;
-                   }
+                if (results == null) {
+                    return;
+                }
                 for (int i = 0; i < results.size(); i++) {
-                    final String res = results.get(i).text+" "+results.get(i).score;
+                    final String res = results.get(i).text + " " + results.get(i).score;
                     Log.i("yll", "index=" + i + "   " + res);
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            StringBuffer  stringBuffer=new StringBuffer(textView.getText().toString());
+                            StringBuffer stringBuffer = new StringBuffer(textView.getText().toString());
                             stringBuffer.append("\n");
                             stringBuffer.append(res);
                             textView.setText(stringBuffer.toString());
@@ -132,19 +161,19 @@ public class MainActivity2 extends Activity {
     public void checkRun() {
         try {
             Utils.copyAssets(this, labelPath);
-            String labelRealDir = new File(this.getExternalFilesDir(null), labelPath).getAbsolutePath();
+            String labelRealDir = new File(this.getFilesDir(), labelPath).getAbsolutePath();
 
             Utils.copyAssets(this, configPath);
-            String configRealDir = new File(this.getExternalFilesDir(null), configPath).getAbsolutePath();
+            String configRealDir = new File(this.getFilesDir(), configPath).getAbsolutePath();
 
             Utils.copyAssets(this, detModelPath);
-            String detRealModelDir = new File(this.getExternalFilesDir(null), detModelPath).getAbsolutePath();
+            String detRealModelDir = new File(this.getFilesDir(), detModelPath).getAbsolutePath();
 
             Utils.copyAssets(this, clsModelPath);
-            String clsRealModelDir = new File(this.getExternalFilesDir(null), clsModelPath).getAbsolutePath();
+            String clsRealModelDir = new File(this.getFilesDir(), clsModelPath).getAbsolutePath();
 
             Utils.copyAssets(this, recModelPath);
-            String recRealModelDir = new File(this.getExternalFilesDir(null), recModelPath).getAbsolutePath();
+            String recRealModelDir = new File(this.getFilesDir(), recModelPath).getAbsolutePath();
 
             predictor.init(this, detRealModelDir, clsRealModelDir, recRealModelDir, configRealDir, labelRealDir, cpuThreadNum, cpuPowerMode);
         } catch (Throwable e) {

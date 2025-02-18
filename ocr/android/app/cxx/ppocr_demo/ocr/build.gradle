@@ -5,7 +5,7 @@ plugins {
 
 android {
   //  namespace 'com.example.lib_local_ocr'
-    compileSdkVersion 28
+    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 15
@@ -39,7 +39,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.example' // Maven groupId
             artifactId = 'ocr' // Maven artifactId
-            version = '1.0.0' // 版本号
+            version = '1.0.1dev5' // 版本号
 
             artifact("$buildDir/outputs/aar/${project.name}-release.aar") // 指定 AAR 文件路径
         }
